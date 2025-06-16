@@ -7,7 +7,8 @@ class NewsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'No News is Good News',
+        'No News is Good News But More Text',
+        textAlign: TextAlign.center,  // <-- Add this line
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
     );
