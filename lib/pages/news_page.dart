@@ -27,25 +27,20 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.lightGreen[500],
-      borderRadius: BorderRadius.circular(16),
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        borderRadius: BorderRadius.circular(16),
-        onTap: () {
-          print('MyButton was tapped! (that ass)');
-        },
-        child: Container(
-          height: 50,
-          padding: const EdgeInsets.all(8),
-          margin: const EdgeInsets.symmetric(horizontal: 8),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: const Center(child: Text('Engage')),
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.lightGreen[800],
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
         ),
+        padding: const EdgeInsets.symmetric(horizontal: 44, vertical: 8),
+        minimumSize: const Size.fromHeight(48),
       ),
+      onPressed: () {
+        print('MyButton was tapped!');
+      },
+      child: const Text('Engage'),
     );
   }
 }
+
